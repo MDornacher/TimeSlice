@@ -1,2 +1,2 @@
-# Sample
-!(animation)[https://i.imgur.com/cyBtDwL.gifv]
+# Sample:
+![Animation](https://i.imgur.com/cyBtDwL.gifv)
