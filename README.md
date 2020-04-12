@@ -11,7 +11,7 @@ Python script to create sliced image sequence for time lapse.
 
 It is possible to slice images in sections with `--start_image <start_index>` and/or `--final_image <final_index>`  
 
-## Sample:
+## Sample
 ![](./sample.gif)
 
 ## Limitations
