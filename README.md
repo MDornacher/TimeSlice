@@ -1,4 +1,4 @@
-# Time Slice
+# Sliced Time Lapse
 Python script to create sliced image sequence for time lapse.
 
 ## Requires
