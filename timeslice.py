@@ -10,6 +10,8 @@ ap.add_argument('-i', '--images_path', help='Path to images', required=True)
 ap.add_argument('-x', '--images_ext', help='Extension of images', required=True)
 ap.add_argument('--start_image', help='nth image to start with', type=int)
 ap.add_argument('--final_image', help='nth image to end with', type=int)
+ap.add_argument('--animation', help='Create animation of frames as webm with ffmpeg', action='store_true')
+ap.add_argument('-fps', help='Framerate for animation', type=int, default=10)
 args = vars(ap.parse_args())
 
 images_path = os.path.normpath(args['images_path'])
@@ -59,5 +61,6 @@ for k in range(start_image, final_image):
     img.close()
 
 # creates animation with ffmpeg
-# print('Creating webm...')
-# os.system(f'ffmpeg -f image2 -framerate 10 -pattern_type sequence -start_number 001 -i frame%03d.tif timeslice.webm')
+if args['animation']:
+    print('Creating webm...')
+    os.system(f'ffmpeg -f image2 -framerate {args["fps"]} -pattern_type sequence -start_number 001 -i frame%03d.tif timeslice.webm')
